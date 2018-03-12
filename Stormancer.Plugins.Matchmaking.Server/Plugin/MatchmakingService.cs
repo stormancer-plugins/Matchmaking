@@ -48,8 +48,8 @@ namespace Stormancer.Server.Matchmaking
         public MatchmakingService(IEnumerable<IMatchmakingDataExtractor> extractors,
             IMatchmaker matchmaker,
             IMatchmakingResolver resolver,
-                    IUserSessions sessions,
-            //   MatchmakingPeerService peerService,
+            IUserSessions sessions,
+            //MatchmakingPeerService peerService,
             ILogger logger, ISceneHost scene)
         {
             this._extractors = extractors;
@@ -152,12 +152,19 @@ namespace Stormancer.Server.Matchmaking
             var provider = request.ReadObject<string>();
 
             var currentUser = await _sessions.GetUser(request.RemotePeer);
+            var dataExtracted = false;
             foreach (var extractor in _extractors)
             {
                 if (await extractor.ExtractData(provider, request, group))
                 {
+                    dataExtracted = true;
                     break;
                 }
+            }
+
+            if(!dataExtracted)
+            {
+                throw new ClientException($"Unkown matchmaking provider '{provider}'.");
             }
 
             var peersInGroup = await Task.WhenAll(group.Players.Select(async p => new { Peer = await _sessions.GetPeer(p.UserId), Player = p }));
