@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Stormancer.Matchmaking
+namespace Stormancer.Server.Matchmaking
 {
     public interface IMatchmakingResolutionWriterContext
     {

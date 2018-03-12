@@ -4,7 +4,7 @@ using Stormancer.Core;
 using Stormancer.Configuration;
 using System.Threading;
 
-namespace Stormancer.Matchmaking
+namespace Stormancer.Server.Matchmaking
 {
     public interface IMatchmakingService : IConfigurationRefresh
     {

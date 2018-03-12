@@ -1,6 +1,6 @@
 ﻿using MsgPack.Serialization;
 
-namespace Stormancer.Matchmaking
+namespace Stormancer.Server.Matchmaking
 {
     [MessagePackEnum(SerializationMethod = EnumSerializationMethod.ByUnderlyingValue)]
     public enum MatchmakingStatusUpdate

@@ -2,7 +2,7 @@
 using Stormancer.Plugins;
 using Stormancer.Configuration;
 
-namespace Stormancer.Matchmaking
+namespace Stormancer.Server.Matchmaking
 {
     public interface IMatchmakingDataExtractor 
     {

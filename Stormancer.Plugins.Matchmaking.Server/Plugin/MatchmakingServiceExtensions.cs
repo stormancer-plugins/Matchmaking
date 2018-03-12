@@ -1,5 +1,5 @@
 ﻿using Stormancer.Core;
-using Stormancer.Matchmaking;
+using Stormancer.Server.Matchmaking;
 using System;
 using System.Collections.Generic;
 using System.Linq;

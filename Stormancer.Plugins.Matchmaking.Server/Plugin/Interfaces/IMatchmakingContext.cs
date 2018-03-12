@@ -1,7 +1,7 @@
 ﻿using Stormancer.Plugins;
 using System;
 
-namespace Stormancer.Matchmaking
+namespace Stormancer.Server.Matchmaking
 {
     public interface IMatchmakingContext
     {

@@ -4,7 +4,7 @@
 //using System.Text;
 //using System.Threading.Tasks;
 
-//namespace Stormancer.Matchmaking.Default
+//namespace Stormancer.Server.Matchmaking
 //{
 //    public class DefaultMatchmakingResolver : IMatchmakingResolver
 //    {

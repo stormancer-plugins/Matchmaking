@@ -8,7 +8,7 @@
 //using System.Threading.Tasks;
 //using Stormancer.Server;
 
-//namespace Stormancer.Matchmaking
+//namespace Stormancer.Server.Matchmaking
 //{
 //    public class MatchmakingPeerService
 //    {
